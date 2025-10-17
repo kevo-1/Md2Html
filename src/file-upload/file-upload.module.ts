@@ -11,7 +11,7 @@ import { join } from "path";
 		MulterModule.register({
 			storage: diskStorage({
 				destination: (req, file, cb) => {
-					const uploadPath = join(__dirname, "..", "uploads");
+					const uploadPath = join(__dirname, "../..", "uploads");
 					if (!fs.existsSync(uploadPath)) {
 						fs.mkdirSync(uploadPath, { recursive: true });
 					}

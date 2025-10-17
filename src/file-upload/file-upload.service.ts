@@ -28,7 +28,7 @@ export class FileUploadService {
 	}
 
 	returnFileName(name: string): string {
-		const uploadDir = path.join(__dirname, "..", "uploads");
+		const uploadDir = path.join(__dirname, "../..", "uploads");
 
 		if (!fs.existsSync(uploadDir)) {
 			throw new Error("Uploads directory does not exist");
